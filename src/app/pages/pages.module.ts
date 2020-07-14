@@ -3,7 +3,7 @@ import { PAGES_ROUTES } from './pages.routes';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 // ng2-charts
@@ -24,6 +24,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +39,18 @@ import { ProfileComponent } from './profile/profile.component';
     PromesasComponent,
     RxjsComponent,
     ProfileComponent,
+    UsuariosComponent,
+    ModalUploadComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Graficas1Component],
-  imports: [CommonModule, SharedModule, PAGES_ROUTES, FormsModule, ChartsModule, PipesModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    PAGES_ROUTES,
+    FormsModule,
+    ChartsModule,
+    ReactiveFormsModule,
+    PipesModule,
+  ],
 })
 export class PagesModule {}

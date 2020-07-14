@@ -12,13 +12,11 @@ export class ImagenPipe implements PipeTransform {
       return url + '/usuario/notfound';
     }
     if (img.indexOf('https') >= 0) {
-      console.log('http');
       return img;
     }
     switch (tipo) {
       case 'usuario':
         url = url + '/usuarios/' + img;
-        console.log(url);
         break;
 
       case 'medico':
@@ -30,7 +28,6 @@ export class ImagenPipe implements PipeTransform {
         break;
 
       default:
-        console.log('no existe');
         url = url + 'usuarios/notfound';
         break;
     }

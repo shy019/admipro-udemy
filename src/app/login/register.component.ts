@@ -47,10 +47,10 @@ export class RegisterComponent implements OnInit {
     );
 
     this.forma.setValue({
-      nombre: 'Cristian',
-      correo: 'cristianpg123@hotmail.com',
-      password: '123',
-      password2: '1234',
+      nombre: 'test9',
+      correo: 'test9@hotmail.com',
+      password: '123456',
+      password2: '123456',
       condiciones: true,
     });
   }
